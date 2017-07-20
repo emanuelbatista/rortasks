@@ -1,79 +1,48 @@
+
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Salesforceusers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Alias</th>
-      <th>Email</th>
-      <th>Username</th>
-      <th>Communitynickname</th>
-      <th>Title</th>
-      <th>Company</th>
-      <th>Department</th>
-      <th>Division</th>
-      <th>Address</th>
-      <th>Timezone</th>
-      <th>Locale</th>
-      <th>Language</th>
-      <th>Delegatedapprover</th>
-      <th>Manager</th>
-      <th>Role</th>
-      <th>Userlicense</th>
-      <th>Profile</th>
-      <th>Active</th>
-      <th>Marketinguser</th>
-      <th>Offlineuser</th>
-      <th>Knowledgeuser</th>
-      <th>Forcecomflowuser</th>
-      <th>Serviceclouduser</th>
-      <th>Sitecomcontributoruser</th>
-      <th>Sitecompublisheruser</th>
-      <th>Mobileuser</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="w3-bar w3-large w3-theme-d4">
+  <a href="#" class="w3-bar-item w3-button">
+    <i class="fa fa-bars"></i></a>  
+  <span class="w3-bar-item">Listing Salesforceusers</span> 
+  <a href="#" class="w3-bar-item w3-button w3-right">
+    <i class="fa fa-search"></i></a>
+</div>
+<div class="w3-container w3-content">
     <% @salesforceusers.each do |salesforceuser| %>
-      <tr>
-        <td><%= salesforceuser.name %></td>
-        <td><%= salesforceuser.alias %></td>
-        <td><%= salesforceuser.email %></td>
-        <td><%= salesforceuser.username %></td>
-        <td><%= salesforceuser.communitynickname %></td>
-        <td><%= salesforceuser.title %></td>
-        <td><%= salesforceuser.company %></td>
-        <td><%= salesforceuser.department %></td>
-        <td><%= salesforceuser.division %></td>
-        <td><%= salesforceuser.address %></td>
-        <td><%= salesforceuser.timezone %></td>
-        <td><%= salesforceuser.locale %></td>
-        <td><%= salesforceuser.language %></td>
-        <td><%= salesforceuser.delegatedapprover %></td>
-        <td><%= salesforceuser.manager %></td>
-        <td><%= salesforceuser.role %></td>
-        <td><%= salesforceuser.userlicense %></td>
-        <td><%= salesforceuser.profile %></td>
-        <td><%= salesforceuser.active %></td>
-        <td><%= salesforceuser.marketinguser %></td>
-        <td><%= salesforceuser.offlineuser %></td>
-        <td><%= salesforceuser.knowledgeuser %></td>
-        <td><%= salesforceuser.forcecomflowuser %></td>
-        <td><%= salesforceuser.serviceclouduser %></td>
-        <td><%= salesforceuser.sitecomcontributoruser %></td>
-        <td><%= salesforceuser.sitecompublisheruser %></td>
-        <td><%= salesforceuser.mobileuser %></td>
-        <td><%= link_to 'Show', salesforceuser %></td>
-        <td><%= link_to 'Edit', edit_salesforceuser_path(salesforceuser) %></td>
-        <td><%= link_to 'Destroy', salesforceuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="w3-panel w3-white w3-card-2 w3-display-container">
+        <p><%= salesforceuser.name %></p>
+        <p><%= salesforceuser.alias %></p>
+        <p><%= salesforceuser.email %></p>
+        <p><%= salesforceuser.username %></p>
+        <p><%= salesforceuser.communitynickname %></p>
+        <p><%= salesforceuser.title %></p>
+        <p><%= salesforceuser.company %></p>
+        <p><%= salesforceuser.department %></p>
+        <p><%= salesforceuser.division %></p>
+        <p><%= salesforceuser.address %></p>
+        <p><%= salesforceuser.timezone %></p>
+        <p><%= salesforceuser.locale %></p>
+        <p><%= salesforceuser.language %></p>
+        <p><%= salesforceuser.delegatedapprover %></p>
+        <p><%= salesforceuser.manager %></p>
+        <p><%= salesforceuser.role %></p>
+        <p><%= salesforceuser.userlicense %></p>
+        <p><%= salesforceuser.profile %></p>
+        <p><%= salesforceuser.active %></p>
+        <p><%= salesforceuser.marketinguser %></p>
+        <p><%= salesforceuser.offlineuser %></p>
+        <p><%= salesforceuser.knowledgeuser %></p>
+        <p><%= salesforceuser.forcecomflowuser %></p>
+        <p><%= salesforceuser.serviceclouduser %></p>
+        <p><%= salesforceuser.sitecomcontributoruser %></p>
+        <p><%= salesforceuser.sitecompublisheruser %></p>
+        <p><%= salesforceuser.mobileuser %></p>
+        <p><%= link_to 'Show', salesforceuser %></p>
+        <p><%= link_to 'Edit', edit_salesforceuser_path(salesforceuser) %></p>
+        <p><%= link_to 'Destroy', salesforceuser, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+</div>
 <br>
 
 <%= link_to 'New Salesforceuser', new_salesforceuser_path %>

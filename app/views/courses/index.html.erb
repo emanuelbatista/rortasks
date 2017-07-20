@@ -1,53 +1,35 @@
+
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Courses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Fullname</th>
-      <th>Shortname</th>
-      <th>Courseidnumber</th>
-      <th>Summary</th>
-      <th>Format</th>
-      <th>Numberofweekstopics</th>
-      <th>Start</th>
-      <th>Hiddensections</th>
-      <th>Newsitemstoshow</th>
-      <th>Showgrades</th>
-      <th>Showactivityreports</th>
-      <th>Maxuploadsize</th>
-      <th>Defaultroles</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="w3-bar w3-large w3-theme-d4">
+  <a href="#" class="w3-bar-item w3-button">
+    <i class="fa fa-bars"></i></a>  
+  <span class="w3-bar-item">Listing Courses</span> 
+  <a href="#" class="w3-bar-item w3-button w3-right">
+    <i class="fa fa-search"></i></a>
+</div>
+<div class="w3-container w3-content">
     <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.code %></td>
-        <td><%= course.fullname %></td>
-        <td><%= course.shortname %></td>
-        <td><%= course.courseidnumber %></td>
-        <td><%= course.summary %></td>
-        <td><%= course.format %></td>
-        <td><%= course.numberofweekstopics %></td>
-        <td><%= course.start %></td>
-        <td><%= course.hiddensections %></td>
-        <td><%= course.newsitemstoshow %></td>
-        <td><%= course.showgrades %></td>
-        <td><%= course.showactivityreports %></td>
-        <td><%= course.maxuploadsize %></td>
-        <td><%= course.defaultroles %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="w3-panel w3-white w3-card-2 w3-display-container">
+        <p><%= course.code %></p>
+        <p><%= course.fullname %></p>
+        <p><%= course.shortname %></p>
+        <p><%= course.courseidnumber %></p>
+        <p><%= course.summary %></p>
+        <p><%= course.format %></p>
+        <p><%= course.numberofweekstopics %></p>
+        <p><%= course.start %></p>
+        <p><%= course.hiddensections %></p>
+        <p><%= course.newsitemstoshow %></p>
+        <p><%= course.showgrades %></p>
+        <p><%= course.showactivityreports %></p>
+        <p><%= course.maxuploadsize %></p>
+        <p><%= course.defaultroles %></p>
+        <p><%= link_to 'Show', course %></p>
+        <p><%= link_to 'Edit', edit_course_path(course) %></p>
+        <p><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+</div>
 <br>
 
 <%= link_to 'New Course', new_course_path %>

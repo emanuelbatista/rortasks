@@ -1,71 +1,44 @@
+
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Bugs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Product</th>
-      <th>Component</th>
-      <th>Version</th>
-      <th>Summary</th>
-      <th>Description</th>
-      <th>Hardware</th>
-      <th>Importance</th>
-      <th>Targetmilestone</th>
-      <th>Assignedto</th>
-      <th>Qacontact</th>
-      <th>Url</th>
-      <th>Whiteboard</th>
-      <th>Keywords</th>
-      <th>Tags</th>
-      <th>Dependson</th>
-      <th>Blocks</th>
-      <th>Origestimated</th>
-      <th>Hoursworked</th>
-      <th>Hoursleft</th>
-      <th>Deadline</th>
-      <th>Additionalcomments</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="w3-bar w3-large w3-theme-d4">
+  <a href="#" class="w3-bar-item w3-button">
+    <i class="fa fa-bars"></i></a>  
+  <span class="w3-bar-item">Listing Bugs</span> 
+  <a href="#" class="w3-bar-item w3-button w3-right">
+    <i class="fa fa-search"></i></a>
+</div>
+<div class="w3-container w3-content">
     <% @bugs.each do |bug| %>
-      <tr>
-        <td><%= bug.code %></td>
-        <td><%= bug.product %></td>
-        <td><%= bug.component %></td>
-        <td><%= bug.version %></td>
-        <td><%= bug.summary %></td>
-        <td><%= bug.description %></td>
-        <td><%= bug.hardware %></td>
-        <td><%= bug.importance %></td>
-        <td><%= bug.targetmilestone %></td>
-        <td><%= bug.assignedto %></td>
-        <td><%= bug.qacontact %></td>
-        <td><%= bug.url %></td>
-        <td><%= bug.whiteboard %></td>
-        <td><%= bug.keywords %></td>
-        <td><%= bug.tags %></td>
-        <td><%= bug.dependson %></td>
-        <td><%= bug.blocks %></td>
-        <td><%= bug.origestimated %></td>
-        <td><%= bug.hoursworked %></td>
-        <td><%= bug.hoursleft %></td>
-        <td><%= bug.deadline %></td>
-        <td><%= bug.additionalcomments %></td>
-        <td><%= bug.status %></td>
-        <td><%= link_to 'Show', bug %></td>
-        <td><%= link_to 'Edit', edit_bug_path(bug) %></td>
-        <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="w3-panel w3-white w3-card-2 w3-display-container">
+        <p><%= bug.code %></p>
+        <p><%= bug.product %></p>
+        <p><%= bug.component %></p>
+        <p><%= bug.version %></p>
+        <p><%= bug.summary %></p>
+        <p><%= bug.description %></p>
+        <p><%= bug.hardware %></p>
+        <p><%= bug.importance %></p>
+        <p><%= bug.targetmilestone %></p>
+        <p><%= bug.assignedto %></p>
+        <p><%= bug.qacontact %></p>
+        <p><%= bug.url %></p>
+        <p><%= bug.whiteboard %></p>
+        <p><%= bug.keywords %></p>
+        <p><%= bug.tags %></p>
+        <p><%= bug.dependson %></p>
+        <p><%= bug.blocks %></p>
+        <p><%= bug.origestimated %></p>
+        <p><%= bug.hoursworked %></p>
+        <p><%= bug.hoursleft %></p>
+        <p><%= bug.deadline %></p>
+        <p><%= bug.additionalcomments %></p>
+        <p><%= bug.status %></p>
+        <p><%= link_to 'Show', bug %></p>
+        <p><%= link_to 'Edit', edit_bug_path(bug) %></p>
+        <p><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+</div>
 <br>
 
 <%= link_to 'New Bug', new_bug_path %>
