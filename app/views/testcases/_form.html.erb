@@ -1,4 +1,4 @@
-<%= form_for(@testcase) do |f| %>
+<%= form_for @testcase, :html => { :class => "w3-card-4" } do |f|%>
   <% if @testcase.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@testcase.errors.count, "error") %> prohibited this testcase from being saved:</h2>

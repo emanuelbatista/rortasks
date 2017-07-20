@@ -1,4 +1,4 @@
-<%= form_for(@salesforceuser) do |f| %>
+<%= form_for @salesforceuser, :html => { :class => "w3-card-4" } do |f|%>
   <% if @salesforceuser.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@salesforceuser.errors.count, "error") %> prohibited this salesforceuser from being saved:</h2>
