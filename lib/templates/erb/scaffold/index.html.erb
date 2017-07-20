@@ -1,7 +1,19 @@
 <p id="notice"><%%= notice %></p>
 
 <h1>Listing <%= plural_table_name.titleize %></h1>
+<% if singular_table_name == 'testcase' || singular_table_name == 'quiz' || singular_table_name == 'course' -%>  
+<ul class="w3-ul w3-hoverable">
 
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+      <li class="w3-border">
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <p><span class="w3-tag w3-blue"><%%= <%= singular_table_name %>.<%= attribute.name %> %></span></p>
+<% end -%>
+     
+      </li>
+    <%% end %>
+</ul>
+<% else -%>
 <table>
   <thead>
     <tr>
@@ -25,6 +37,9 @@
     <%% end %>
   </tbody>
 </table>
+
+<% end -%>
+
 
 <br>
 
