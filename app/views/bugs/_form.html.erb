@@ -1,4 +1,4 @@
-<%= form_for(@bug) do |f| %>
+<%= form_for @bug, :html => { :class => "w3-container"} do |f| %>
   <% if @bug.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bug.errors.count, "error") %> prohibited this bug from being saved:</h2>
@@ -12,96 +12,96 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :code %><br>
-    <%= f.text_field :code %>
+    <%= f.text_field :code, :class => 'w3-input' %>
+    <%= f.label :code %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :product %><br>
-    <%= f.text_field :product %>
+    <%= f.text_field :product, :class => 'w3-input' %>
+    <%= f.label :product %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :component %><br>
-    <%= f.text_field :component %>
+    <%= f.text_field :component, :class => 'w3-input' %>
+    <%= f.label :component %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :version %><br>
-    <%= f.text_field :version %>
+    <%= f.text_field :version, :class => 'w3-input' %>
+    <%= f.label :version %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :summary %><br>
-    <%= f.text_field :summary %>
+    <%= f.text_field :summary, :class => 'w3-input' %>
+    <%= f.label :summary %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :class => 'w3-input' %>
+    <%= f.label :description %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :hardware %><br>
-    <%= f.text_field :hardware %>
+    <%= f.text_field :hardware, :class => 'w3-input' %>
+    <%= f.label :hardware %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :importance %><br>
-    <%= f.number_field :importance %>
+    <%= f.number_field :importance, :class => 'w3-input' %>
+    <%= f.label :importance %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :targetmilestone %><br>
-    <%= f.text_field :targetmilestone %>
+    <%= f.text_field :targetmilestone, :class => 'w3-input' %>
+    <%= f.label :targetmilestone %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :assignedto %><br>
-    <%= f.text_field :assignedto %>
+    <%= f.text_field :assignedto, :class => 'w3-input' %>
+    <%= f.label :assignedto %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :qacontact %><br>
-    <%= f.text_field :qacontact %>
+    <%= f.text_field :qacontact, :class => 'w3-input' %>
+    <%= f.label :qacontact %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, :class => 'w3-input' %>
+    <%= f.label :url %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :whiteboard %><br>
-    <%= f.text_field :whiteboard %>
+    <%= f.text_field :whiteboard, :class => 'w3-input' %>
+    <%= f.label :whiteboard %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :keywords %><br>
-    <%= f.text_field :keywords %>
+    <%= f.text_field :keywords, :class => 'w3-input' %>
+    <%= f.label :keywords %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :tags %><br>
-    <%= f.text_field :tags %>
+    <%= f.text_field :tags, :class => 'w3-input' %>
+    <%= f.label :tags %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :dependson %><br>
-    <%= f.text_field :dependson %>
+    <%= f.text_field :dependson, :class => 'w3-input' %>
+    <%= f.label :dependson %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :blocks %><br>
-    <%= f.text_field :blocks %>
+    <%= f.text_field :blocks, :class => 'w3-input' %>
+    <%= f.label :blocks %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :origestimated %><br>
-    <%= f.text_field :origestimated %>
+    <%= f.text_field :origestimated, :class => 'w3-input' %>
+    <%= f.label :origestimated %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :hoursworked %><br>
-    <%= f.text_field :hoursworked %>
+    <%= f.text_field :hoursworked, :class => 'w3-input' %>
+    <%= f.label :hoursworked %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :hoursleft %><br>
-    <%= f.text_field :hoursleft %>
+    <%= f.text_field :hoursleft, :class => 'w3-input' %>
+    <%= f.label :hoursleft %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :deadline %><br>
-    <%= f.date_select :deadline %>
+    <%= f.date_select :deadline, :class => 'w3-input' %>
+    <%= f.label :deadline %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :additionalcomments %><br>
-    <%= f.text_field :additionalcomments %>
+    <%= f.text_field :additionalcomments, :class => 'w3-input' %>
+    <%= f.label :additionalcomments %><p></p><br>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.text_field :status, :class => 'w3-input' %>
+    <%= f.label :status %><p></p><br>
   </div>
   <div class="actions">
     <%= f.submit %>
