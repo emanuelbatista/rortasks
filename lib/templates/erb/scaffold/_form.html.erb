@@ -13,6 +13,7 @@
 
 <% attributes.each do |attribute| -%>
   <div class="field">
+<% if  attribute.column_name != 'description' && attribute.column_name != 'summary' -%>
 <% if attribute.password_digest? -%>
     <%%= f.label :password %><br>
     <%%= f.password_field :password %>
@@ -26,6 +27,16 @@
 <% end -%>
   </div>
 <% end -%>
+
+<% if  attribute.column_name == 'description' -%>
+  <%%= f.text_area(:<%= attribute.column_name %>, cols: 50, rows: 8) %>
+<% end -%>
+<% if  attribute.column_name == 'summary' -%>
+  <%%= f.text_area(:<%= attribute.column_name %>, cols: 50, rows: 5) %>
+<% end -%>
+
+<% end -%>
+
   <div class="actions">
     <%%= f.submit %>
   </div>
